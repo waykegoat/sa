@@ -1,30 +1,44 @@
 <template>
-  <HomePage />
+  <div class="home-page">
+    <div class="page-container">
+      <h1 class="page-title">🖧 Калькулятор подсетей</h1>
+      <p class="page-description">
+        Введите IP адрес и выберите сетевую маску для расчета параметров подсети
+      </p>
+      <SubnetCalculator />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import HomePage from './pages/HomePage.vue'
+import SubnetCalculator from '../components/SubnetCalculator.vue'
 </script>
 
-<style>
-:root {
-  --color-primary: #006cbb;
-  --color-success: #01bd78;
-  --color-error: #d40019;
-  --color-white: #fff;
-  --color-gray: #ccc;
-  --color-black: #000;
+<style scoped>
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: var(--color-black);
+.page-title {
+  text-align: center;
+  color: var(--color-white);
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.page-description {
+  text-align: center;
+  color: var(--color-white);
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
 }
 </style>
